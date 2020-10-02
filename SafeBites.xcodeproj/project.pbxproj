@@ -18,6 +18,7 @@
 		3F35865424DEA9BF00077AB0 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35865324DEA9BF00077AB0 /* LocationViewController.swift */; };
 		3F35865624DEB59600077AB0 /* PerillaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35865524DEB59600077AB0 /* PerillaViewController.swift */; };
 		3FAC39EC24E26E0E00584639 /* RatePerillaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC39EB24E26E0E00584639 /* RatePerillaViewController.swift */; };
+		AC57EC6A2526A1D900C362DD /* nameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57EC692526A1D900C362DD /* nameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3F35865324DEA9BF00077AB0 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		3F35865524DEB59600077AB0 /* PerillaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerillaViewController.swift; sourceTree = "<group>"; };
 		3FAC39EB24E26E0E00584639 /* RatePerillaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePerillaViewController.swift; sourceTree = "<group>"; };
+		AC57EC692526A1D900C362DD /* nameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				3F35864324DDD74300077AB0 /* SecondViewController.swift */,
 				3F35864524DDD74300077AB0 /* Main.storyboard */,
 				3F35864824DDD74A00077AB0 /* Assets.xcassets */,
+				AC57EC692526A1D900C362DD /* nameTableViewCell.swift */,
 				3F35864A24DDD74A00077AB0 /* LaunchScreen.storyboard */,
 				3F35864D24DDD74A00077AB0 /* Info.plist */,
 				3F35865324DEA9BF00077AB0 /* LocationViewController.swift */,
@@ -161,6 +164,7 @@
 				3F35863E24DDD74300077AB0 /* AppDelegate.swift in Sources */,
 				3F35864024DDD74300077AB0 /* SceneDelegate.swift in Sources */,
 				3F1CE21924E50F600069C15B /* ScoreViewController.swift in Sources */,
+				AC57EC6A2526A1D900C362DD /* nameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,94 +68,50 @@
                                     <action selector="backtohomepressed:" destination="J7h-Kd-dJf" eventType="touchUpInside" id="FgP-XF-amB"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ifb-fW-xyX">
-                                <rect key="frame" x="5" y="119" width="404" height="728"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patxi's Pizzeria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY1-Qe-ODt">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3F-JB-u2Y">
-                                        <rect key="frame" x="0.0" y="68" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Perilla">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ut2-Ic-SaL">
+                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" rowHeight="100" id="j4j-oS-S7C" customClass="nameTableViewCell" customModule="SafeBites" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j4j-oS-S7C" id="E3l-bu-UeY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hO-Rp-Jqy">
+                                                    <rect key="frame" x="40" y="11" width="354" height="78"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8hO-Rp-Jqy" firstAttribute="top" secondItem="E3l-bu-UeY" secondAttribute="topMargin" id="3A6-9R-CN8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8hO-Rp-Jqy" secondAttribute="bottom" id="djx-26-liY"/>
+                                                <constraint firstItem="8hO-Rp-Jqy" firstAttribute="leading" secondItem="E3l-bu-UeY" secondAttribute="leadingMargin" constant="20" id="m3T-e3-Jb2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8hO-Rp-Jqy" secondAttribute="trailing" id="u7A-XS-qiR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                         <connections>
-                                            <action selector="toPerillaPressed:" destination="J7h-Kd-dJf" eventType="touchUpInside" id="SUm-aV-KXO"/>
+                                            <outlet property="nameLabel" destination="8hO-Rp-Jqy" id="voj-eI-DQA"/>
                                         </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marnee Thai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-Vu-fSI">
-                                        <rect key="frame" x="0.0" y="136" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dumpling King" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZL-TB-kdi">
-                                        <rect key="frame" x="0.0" y="204" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0i-aV-67D">
-                                        <rect key="frame" x="0.0" y="272" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Gordos">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdH-qf-MCd">
-                                        <rect key="frame" x="0.0" y="340" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Jamba Juice">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbucks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuB-vL-WCA">
-                                        <rect key="frame" x="0.0" y="408" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Tung" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQ8-dY-WnW">
-                                        <rect key="frame" x="0.0" y="476" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lela" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEr-yB-7Lo">
-                                        <rect key="frame" x="0.0" y="544" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yummas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kse-N3-Lc0">
-                                        <rect key="frame" x="0.0" y="612" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plutos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPf-bT-c02">
-                                        <rect key="frame" x="0.0" y="680" width="404" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lVd-hJ-WMm" firstAttribute="trailing" secondItem="Ifb-fW-xyX" secondAttribute="trailing" constant="5" id="Du3-AD-bum"/>
+                            <constraint firstItem="lVd-hJ-WMm" firstAttribute="bottom" secondItem="Ut2-Ic-SaL" secondAttribute="bottom" id="0jY-Jy-hjc"/>
                             <constraint firstItem="9Il-fc-s6R" firstAttribute="top" secondItem="lVd-hJ-WMm" secondAttribute="top" id="E8R-s0-vig"/>
-                            <constraint firstItem="Ifb-fW-xyX" firstAttribute="leading" secondItem="lVd-hJ-WMm" secondAttribute="leading" constant="5" id="FMM-5j-c9N"/>
-                            <constraint firstItem="Ifb-fW-xyX" firstAttribute="top" secondItem="9Il-fc-s6R" secondAttribute="bottom" constant="5" id="QXV-KY-U61"/>
+                            <constraint firstItem="Ut2-Ic-SaL" firstAttribute="leading" secondItem="lVd-hJ-WMm" secondAttribute="leading" id="L1p-wc-OFS"/>
+                            <constraint firstItem="lVd-hJ-WMm" firstAttribute="trailing" secondItem="Ut2-Ic-SaL" secondAttribute="trailing" id="McQ-WP-Xv2"/>
+                            <constraint firstItem="Ut2-Ic-SaL" firstAttribute="top" secondItem="9Il-fc-s6R" secondAttribute="bottom" id="NHd-25-oGs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lVd-hJ-WMm"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Ut2-Ic-SaL" id="oYK-zl-ny0"/>
                         <segue destination="9pv-A4-QxB" kind="showDetail" identifier="LocationtoHomeSegue" id="uo9-JC-8sU"/>
                         <segue destination="2Iq-FN-oIR" kind="showDetail" identifier="toPerillaSegue" id="2MR-hG-SdJ"/>
                     </connections>
@@ -173,23 +129,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hkF-dR-0xJ">
-                                <rect key="frame" x="5" y="49" width="404" height="140"/>
+                                <rect key="frame" x="5" y="49" width="404" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtw-RN-yGf">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="70"/>
                                         <state key="normal" image="backButton"/>
                                         <connections>
                                             <action selector="perillatolocation:" destination="2Iq-FN-oIR" eventType="touchUpInside" id="N0A-xK-ItH"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perilla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-R3-MLq">
-                                        <rect key="frame" x="187" y="0.0" width="140.5" height="140"/>
+                                        <rect key="frame" x="125" y="0.0" width="177.5" height="70"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" red="0.34752294420000002" green="0.71049964430000001" blue="0.55187058450000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-yu-n8c">
-                                        <rect key="frame" x="347.5" y="0.0" width="56.5" height="140"/>
+                                        <rect key="frame" x="322.5" y="0.0" width="81.5" height="70"/>
                                         <color key="backgroundColor" red="0.098889695961355412" green="0.35525063451776651" blue="0.23501770600804306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Rate">
@@ -203,21 +159,21 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wTT-8z-5YM">
-                                <rect key="frame" x="10" y="199" width="758" height="916"/>
+                                <rect key="frame" x="10" y="129" width="406" height="458"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-Y7-wxC">
-                                        <rect key="frame" x="0.0" y="0.0" width="758" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="70"/>
                                         <state key="normal" title="Button" image="Slider1New (1)"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7j-Fj-HLd">
-                                        <rect key="frame" x="0.0" y="140" width="758" height="166"/>
+                                        <rect key="frame" x="0.0" y="70" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VA7-3Q-3Rd">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                                                 <state key="normal" title="Button" image="Snew"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PG-RM-wA6">
-                                                <rect key="frame" x="0.0" y="0.0" width="758" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                                 <connections>
@@ -228,18 +184,18 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5x-V4-y8b">
-                                        <rect key="frame" x="0.0" y="306" width="758" height="140"/>
+                                        <rect key="frame" x="0.0" y="153" width="406" height="70"/>
                                         <state key="normal" title="Button" image="Slider2New"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZy-8p-1sX">
-                                        <rect key="frame" x="0.0" y="446" width="758" height="166"/>
+                                        <rect key="frame" x="0.0" y="223" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-Ne-UOL">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                                                 <state key="normal" title="Button" image="PNew"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHy-2y-FN2">
-                                                <rect key="frame" x="0.0" y="0.0" width="758" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                                 <connections>
@@ -250,18 +206,18 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHa-CV-WZB">
-                                        <rect key="frame" x="0.0" y="612" width="758" height="138"/>
+                                        <rect key="frame" x="0.0" y="306" width="406" height="69"/>
                                         <state key="normal" title="Button" image="Slider3New"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-62-htQ">
-                                        <rect key="frame" x="0.0" y="750" width="758" height="166"/>
+                                        <rect key="frame" x="0.0" y="375" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T83-zY-swc">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                                                 <state key="normal" title="Button" image="TNew"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-hc-Kyh">
-                                                <rect key="frame" x="0.0" y="0.0" width="758" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                                 <connections>
@@ -307,20 +263,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jFe-wi-hge">
-                                <rect key="frame" x="5" y="49" width="404" height="140"/>
+                                <rect key="frame" x="5" y="49" width="404" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMc-zQ-kPA">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="70"/>
                                         <state key="normal" image="backButton"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perilla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="807-jr-AbE">
-                                        <rect key="frame" x="187" y="0.0" width="140.5" height="140"/>
+                                        <rect key="frame" x="125" y="0.0" width="177.5" height="70"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" red="0.34752294420000002" green="0.71049964430000001" blue="0.55187058450000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLa-Mo-N1i">
-                                        <rect key="frame" x="347.5" y="0.0" width="56.5" height="140"/>
+                                        <rect key="frame" x="322.5" y="0.0" width="81.5" height="70"/>
                                         <color key="backgroundColor" red="0.098889695959999996" green="0.3552506345" blue="0.23501770599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Rate">
@@ -331,57 +287,57 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fMy-VZ-tA8">
-                                <rect key="frame" x="10" y="199" width="758" height="916"/>
+                                <rect key="frame" x="10" y="129" width="406" height="458"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-fD-poI">
-                                        <rect key="frame" x="0.0" y="0.0" width="758" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="70"/>
                                         <state key="normal" title="Button" image="sanitizationSlider"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlq-FP-dxg">
-                                        <rect key="frame" x="0.0" y="140" width="758" height="166"/>
+                                        <rect key="frame" x="0.0" y="70" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-TW-DgX">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                                                 <state key="normal" title="Button" image="SpecificLabels (2)"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a5-Gf-HXG">
-                                                <rect key="frame" x="0.0" y="0.0" width="758" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6X-I9-gnj">
-                                        <rect key="frame" x="0.0" y="306" width="758" height="140"/>
+                                        <rect key="frame" x="0.0" y="153" width="406" height="70"/>
                                         <state key="normal" title="Button" image="socialDistancingSlider"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vvi-X8-h56">
-                                        <rect key="frame" x="0.0" y="446" width="758" height="166"/>
+                                        <rect key="frame" x="0.0" y="223" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-HL-xM3">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                                                 <state key="normal" title="Button" image="PDlabels"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYL-q0-bkW">
-                                                <rect key="frame" x="0.0" y="0.0" width="758" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSR-z9-7rU">
-                                        <rect key="frame" x="0.0" y="612" width="758" height="138"/>
+                                        <rect key="frame" x="0.0" y="306" width="406" height="69"/>
                                         <state key="normal" title="Button" image="SMslider"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r05-rL-a3D">
-                                        <rect key="frame" x="0.0" y="750" width="758" height="166"/>
+                                        <rect key="frame" x="0.0" y="375" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmj-m7-Lvs">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                                                 <state key="normal" title="Button" image="TLabels"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jis-EP-6jM">
-                                                <rect key="frame" x="0.0" y="0.0" width="758" height="166"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                             </button>
@@ -911,6 +867,11 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2MR-hG-SdJ"/>
+        <segue reference="Xsw-hW-3QZ"/>
+        <segue reference="uo9-JC-8sU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="NearMe (2)" width="226" height="46"/>
         <image name="PDlabels" width="214" height="83"/>
@@ -929,16 +890,11 @@
         <image name="buttonYN" width="198.5" height="100"/>
         <image name="checkedBox" width="46" height="46"/>
         <image name="done! (1)" width="494.5" height="530.5"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="sanitizationSlider" width="324" height="70"/>
         <image name="socialDistancingSlider" width="352" height="70"/>
         <image name="uncheckedBox" width="46" height="46"/>
         <image name="welcome (3)" width="334.5" height="153"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="2MR-hG-SdJ"/>
-        <segue reference="LVS-ZX-7th"/>
-        <segue reference="uo9-JC-8sU"/>
-    </inferredMetricsTieBreakers>
 </document>
