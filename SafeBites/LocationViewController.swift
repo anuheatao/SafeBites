@@ -36,6 +36,32 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
         }
     
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if(location == nil) {
+            let alertController = UIAlertController (title: "Unable to Get Nearby Restaurants", message: "To get nearby restaurants, we need to access your location. Please go to settings to fix this. Thanks!", preferredStyle: .alert)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                      alertController.addAction(cancelAction)
+              let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+
+                  guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                      return
+                  }
+
+                  if UIApplication.shared.canOpenURL(settingsUrl) {
+                      UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                          print("Settings opened: \(success)") // Prints true
+                      })
+                  }
+              }
+              alertController.addAction(settingsAction)
+          
+
+              present(alertController, animated: true, completion: nil)
+            print("hullo")
+
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
