@@ -123,7 +123,7 @@
         <!--PerillaViewController-->
         <scene sceneID="ku0-nf-2Qu">
             <objects>
-                <viewController title="PerillaViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="2Iq-FN-oIR" customClass="PerillaViewController" customModule="SafeBites" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="seeRates" title="PerillaViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="2Iq-FN-oIR" customClass="PerillaViewController" customModule="SafeBites" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="crt-jf-IN9" customClass="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,20 +132,20 @@
                                 <rect key="frame" x="5" y="49" width="404" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtw-RN-yGf">
-                                        <rect key="frame" x="0.0" y="0.0" width="105" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="70"/>
                                         <state key="normal" image="backButton"/>
                                         <connections>
                                             <action selector="perillatolocation:" destination="2Iq-FN-oIR" eventType="touchUpInside" id="N0A-xK-ItH"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perilla" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-R3-MLq">
-                                        <rect key="frame" x="125" y="0.0" width="177.5" height="70"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                        <rect key="frame" x="147.5" y="0.0" width="129" height="70"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
                                         <color key="textColor" red="0.34752294420000002" green="0.71049964430000001" blue="0.55187058450000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-yu-n8c">
-                                        <rect key="frame" x="322.5" y="0.0" width="81.5" height="70"/>
+                                        <rect key="frame" x="296.5" y="0.0" width="107.5" height="70"/>
                                         <color key="backgroundColor" red="0.098889695961355412" green="0.35525063451776651" blue="0.23501770600804306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <state key="normal" title="Rate">
@@ -159,36 +159,103 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wTT-8z-5YM">
-                                <rect key="frame" x="10" y="129" width="406" height="458"/>
+                                <rect key="frame" x="10" y="129" width="406" height="769"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-Y7-wxC">
-                                        <rect key="frame" x="0.0" y="0.0" width="406" height="70"/>
-                                        <state key="normal" title="Button" image="Slider1New (1)"/>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7j-Fj-HLd">
-                                        <rect key="frame" x="0.0" y="70" width="406" height="83"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="di8-H9-FNy">
+                                        <rect key="frame" x="0.0" y="0.0" width="406" height="464"/>
                                         <subviews>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VA7-3Q-3Rd">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
-                                                <state key="normal" title="Button" image="Snew"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PG-RM-wA6">
-                                                <rect key="frame" x="0.0" y="0.0" width="406" height="83"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Sanitation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsQ-SM-f7H">
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="vM7-bI-ubL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FZ-m7-6Se">
+                                                <rect key="frame" x="0.0" y="50" width="406" height="128"/>
+                                                <subviews>
+                                                    <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jNd-6c-o7H" userLabel="slider">
+                                                        <rect key="frame" x="-2" y="0.0" width="355.5" height="129"/>
+                                                        <color key="minimumTrackTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="maximumTrackTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="slider:" destination="2Iq-FN-oIR" eventType="valueChanged" id="cmW-aV-oxe"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8da-kW-Lzq">
+                                                        <rect key="frame" x="371.5" y="0.0" width="34.5" height="128"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="jNd-6c-o7H" secondAttribute="bottom" id="3gU-IR-JYI"/>
+                                                    <constraint firstItem="jNd-6c-o7H" firstAttribute="centerY" secondItem="5FZ-m7-6Se" secondAttribute="centerY" id="5ap-Ts-7gv"/>
+                                                    <constraint firstItem="jNd-6c-o7H" firstAttribute="leading" secondItem="5FZ-m7-6Se" secondAttribute="leading" id="Sny-g4-zyV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8da-kW-Lzq" secondAttribute="trailing" id="cxn-Bb-EMx"/>
+                                                    <constraint firstItem="jNd-6c-o7H" firstAttribute="top" secondItem="5FZ-m7-6Se" secondAttribute="top" id="dBW-Zm-Fd3"/>
+                                                    <constraint firstItem="8da-kW-Lzq" firstAttribute="centerY" secondItem="5FZ-m7-6Se" secondAttribute="centerY" id="ebI-NU-jdE"/>
+                                                    <constraint firstItem="8da-kW-Lzq" firstAttribute="height" secondItem="5FZ-m7-6Se" secondAttribute="height" id="lSO-dN-Hd6"/>
+                                                    <constraint firstItem="8da-kW-Lzq" firstAttribute="leading" secondItem="jNd-6c-o7H" secondAttribute="trailing" constant="20" id="miP-xV-qhd"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-vU-0jh">
+                                                <rect key="frame" x="0.0" y="178" width="406" height="22"/>
                                                 <state key="normal" title="Button" image="SeeMore"/>
                                                 <state key="selected" image="SeeLess"/>
                                                 <connections>
-                                                    <action selector="SanSeeMore:" destination="2Iq-FN-oIR" eventType="touchUpInside" id="Pll-mt-1YW"/>
-                                                    <action selector="SanSeeMoreTapped:" destination="2Iq-FN-oIR" eventType="touchUpInside" id="skS-tL-fCS"/>
+                                                    <action selector="SanSeeMore:" destination="2Iq-FN-oIR" eventType="touchUpInside" id="iJ9-W7-ZHt"/>
+                                                    <action selector="SanSeeMoreTapped:" destination="2Iq-FN-oIR" eventType="touchUpInside" id="tff-8W-yAJ"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTT-Va-Nof">
+                                                <rect key="frame" x="0.0" y="200" width="406" height="264"/>
+                                                <subviews>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beq-Yp-Q1g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="406" height="264"/>
+                                                        <string key="text">6/10 -- Mask Wearing Required
+6/10 -- Hygeine Supplies Used
+6/10 -- Surfaces Sanitized after Each Patron
+3/10 -- Touchless Transactions
+3/10 -- Shields or Physical Barriers</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zks-le-w87">
+                                                        <rect key="frame" x="0.0" y="0.0" width="406" height="264"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="zks-le-w87" firstAttribute="centerX" secondItem="beq-Yp-Q1g" secondAttribute="centerX" id="BF7-xs-xTU"/>
+                                                    <constraint firstItem="beq-Yp-Q1g" firstAttribute="width" secondItem="qTT-Va-Nof" secondAttribute="width" id="J7M-IC-ycT"/>
+                                                    <constraint firstItem="zks-le-w87" firstAttribute="height" secondItem="beq-Yp-Q1g" secondAttribute="height" id="OMC-jT-jXq"/>
+                                                    <constraint firstItem="zks-le-w87" firstAttribute="centerY" secondItem="beq-Yp-Q1g" secondAttribute="centerY" id="Oi4-1z-jaA"/>
+                                                    <constraint firstItem="zks-le-w87" firstAttribute="width" secondItem="beq-Yp-Q1g" secondAttribute="width" id="i5h-88-MnW"/>
+                                                    <constraint firstItem="beq-Yp-Q1g" firstAttribute="centerX" secondItem="qTT-Va-Nof" secondAttribute="centerX" id="lok-CY-l8T"/>
+                                                    <constraint firstItem="beq-Yp-Q1g" firstAttribute="height" secondItem="qTT-Va-Nof" secondAttribute="height" id="qQr-jX-Oab"/>
+                                                    <constraint firstItem="beq-Yp-Q1g" firstAttribute="centerY" secondItem="qTT-Va-Nof" secondAttribute="centerY" id="zMK-XU-sig"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5FZ-m7-6Se" firstAttribute="width" secondItem="di8-H9-FNy" secondAttribute="width" id="Saa-PG-4Go"/>
+                                            <constraint firstItem="5FZ-m7-6Se" firstAttribute="centerX" secondItem="di8-H9-FNy" secondAttribute="centerX" id="bUr-WU-7WD"/>
+                                            <constraint firstItem="5FZ-m7-6Se" firstAttribute="height" secondItem="di8-H9-FNy" secondAttribute="height" multiplier="0.275862" id="fvd-HS-4Jb"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5x-V4-y8b">
-                                        <rect key="frame" x="0.0" y="153" width="406" height="70"/>
+                                        <rect key="frame" x="0.0" y="464" width="406" height="70"/>
                                         <state key="normal" title="Button" image="Slider2New"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZy-8p-1sX">
-                                        <rect key="frame" x="0.0" y="223" width="406" height="83"/>
+                                        <rect key="frame" x="0.0" y="534" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-Ne-UOL">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
@@ -206,11 +273,11 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHa-CV-WZB">
-                                        <rect key="frame" x="0.0" y="306" width="406" height="69"/>
+                                        <rect key="frame" x="0.0" y="617" width="406" height="69"/>
                                         <state key="normal" title="Button" image="Slider3New"/>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-62-htQ">
-                                        <rect key="frame" x="0.0" y="375" width="406" height="83"/>
+                                        <rect key="frame" x="0.0" y="686" width="406" height="83"/>
                                         <subviews>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T83-zY-swc">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
@@ -228,6 +295,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="di8-H9-FNy" firstAttribute="width" secondItem="wTT-8z-5YM" secondAttribute="width" constant="0.80000000000000004" id="gQx-iD-A6X"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -243,16 +313,19 @@
                     </view>
                     <connections>
                         <outlet property="RateButton" destination="Vb2-yu-n8c" id="OXB-GD-k4z"/>
-                        <outletCollection property="SanSpecific" destination="VA7-3Q-3Rd" collectionClass="NSMutableArray" id="SM9-Tk-VGu"/>
+                        <outlet property="nameLabel" destination="HWe-R3-MLq" id="Qmb-4V-L3E"/>
+                        <outlet property="ratePercentLabel" destination="8da-kW-Lzq" id="rH2-yg-rx5"/>
+                        <outlet property="slida" destination="jNd-6c-o7H" id="xrv-52-suy"/>
                         <outletCollection property="PDSpecific" destination="vQx-Ne-UOL" collectionClass="NSMutableArray" id="55p-EV-9ti"/>
                         <outletCollection property="SMSpecific" destination="T83-zY-swc" collectionClass="NSMutableArray" id="bId-ZN-sP3"/>
+                        <outletCollection property="SanSpecific" destination="beq-Yp-Q1g" collectionClass="NSMutableArray" id="mBT-6b-GOk"/>
                         <segue destination="J7h-Kd-dJf" kind="showDetail" identifier="PerillatoLocationSegue" id="LVS-ZX-7th"/>
                         <segue destination="zZI-bn-IBN" kind="showDetail" identifier="PerillatoRateSegue" id="iFy-tq-ekl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTK-ur-O9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2427.536231884058" y="-605.35714285714278"/>
+            <point key="canvasLocation" x="2477" y="-644"/>
         </scene>
         <!--PerillaViewController2-->
         <scene sceneID="FQY-xa-cta">
@@ -399,7 +472,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="aBt-yG-M24">
                                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="210"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17d-dm-0gV" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17d-dm-0gV" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="66" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -409,7 +482,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="Fsl-0a-DIo"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-JS-RbK" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-JS-RbK" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="41" width="66" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -419,7 +492,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="MG9-Oc-aeB"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-A0-GR8" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqT-A0-GR8" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="82" width="66" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -429,7 +502,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="Lqx-Ew-ZPL"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGZ-ge-FG5" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGZ-ge-FG5" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="123" width="66" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -439,7 +512,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="d4B-BD-M3K"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h55-Pi-v4e" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h55-Pi-v4e" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="164" width="66" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -506,18 +579,8 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-ex-ckV">
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="210"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gig-ZJ-qCa" customClass="checkedBox">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="46"/>
-                                                                        <state key="normal" image="uncheckedBox"/>
-                                                                        <state key="selected" image="checkedBox"/>
-                                                                        <state key="highlighted" image="checkedBox"/>
-                                                                        <connections>
-                                                                            <action selector="checkedBox:" destination="UyW-IF-3dS" eventType="touchUpInside" id="b5b-0i-zeO"/>
-                                                                            <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="JvF-eX-WA6"/>
-                                                                        </connections>
-                                                                    </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-uv-Bgn" customClass="checkedBox">
-                                                                        <rect key="frame" x="0.0" y="41" width="51" height="46"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
                                                                         <state key="highlighted" image="checkedBox"/>
@@ -527,7 +590,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNs-oS-u4A" customClass="checkedBox">
-                                                                        <rect key="frame" x="0.0" y="82" width="51" height="46"/>
+                                                                        <rect key="frame" x="0.0" y="41" width="51" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
                                                                         <state key="highlighted" image="checkedBox"/>
@@ -537,13 +600,23 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCj-IZ-a2o" customClass="checkedBox">
-                                                                        <rect key="frame" x="0.0" y="123" width="51" height="46"/>
+                                                                        <rect key="frame" x="0.0" y="82" width="51" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
                                                                         <state key="highlighted" image="checkedBox"/>
                                                                         <connections>
                                                                             <action selector="checkedBox:" destination="UyW-IF-3dS" eventType="touchUpInside" id="eZW-nu-OJu"/>
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="G9c-9d-gL5"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWJ-VV-gDk" customClass="checkedBox">
+                                                                        <rect key="frame" x="0.0" y="123" width="51" height="46"/>
+                                                                        <state key="normal" image="uncheckedBox"/>
+                                                                        <state key="selected" image="checkedBox"/>
+                                                                        <state key="highlighted" image="checkedBox"/>
+                                                                        <connections>
+                                                                            <action selector="checkedBox:" destination="UyW-IF-3dS" eventType="touchUpInside" id="5oY-HQ-Os8"/>
+                                                                            <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="Vb0-3n-k9O"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-Sg-slM" customClass="checkedBox">
@@ -613,7 +686,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="xw9-wh-gWi">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="210"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-dR-qmM" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-dR-qmM" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -623,7 +696,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="mGv-Qr-bnb"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0S-YB-A1W" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0S-YB-A1W" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="41" width="70" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -633,7 +706,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="mzk-3r-np2"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ii-x7-GkV" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ii-x7-GkV" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="82" width="70" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -643,7 +716,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="GEa-xh-2CY"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE9-yK-eJA" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE9-yK-eJA" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="123" width="70" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -653,7 +726,7 @@
                                                                             <action selector="checkedBoxTapped:" destination="zZI-bn-IBN" eventType="touchUpInside" id="akK-oS-TFl"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT2-cl-yyX" customClass="checkedBox">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT2-cl-yyX" customClass="checkedBox" customModule="SafeBites" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="164" width="70" height="46"/>
                                                                         <state key="normal" image="uncheckedBox"/>
                                                                         <state key="selected" image="checkedBox"/>
@@ -754,6 +827,11 @@
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
+                        <outlet property="maskReq" destination="3pp-uv-Bgn" id="24a-Hg-7kD"/>
+                        <outlet property="sanitizeAfter" destination="pCj-IZ-a2o" id="NLw-Ea-URq"/>
+                        <outlet property="sanitizerHygiene" destination="gNs-oS-u4A" id="GMJ-a1-aY9"/>
+                        <outlet property="shieldsBarriers" destination="xHd-Sg-slM" id="9HB-4V-fR5"/>
+                        <outlet property="touchlessTransaction" destination="KWJ-VV-gDk" id="Ido-hu-Xia"/>
                         <segue destination="2Iq-FN-oIR" kind="showDetail" identifier="RatetoPerillaSegue" id="JPg-Gz-c8A"/>
                         <segue destination="OLi-au-Pbk" kind="showDetail" identifier="RatetoScoreSegue" id="jo3-2K-BRz"/>
                     </connections>
@@ -868,8 +946,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2MR-hG-SdJ"/>
-        <segue reference="Xsw-hW-3QZ"/>
+        <segue reference="JPg-Gz-c8A"/>
+        <segue reference="LVS-ZX-7th"/>
         <segue reference="uo9-JC-8sU"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -879,10 +957,8 @@
         <image name="SMslider" width="324" height="69"/>
         <image name="SeeLess" width="88" height="22"/>
         <image name="SeeMore" width="88" height="22"/>
-        <image name="Slider1New (1)" width="324" height="70"/>
         <image name="Slider2New" width="352" height="70"/>
         <image name="Slider3New" width="324" height="69"/>
-        <image name="Snew" width="214" height="83"/>
         <image name="SpecificLabels (2)" width="214" height="83"/>
         <image name="TLabels" width="214" height="83"/>
         <image name="TNew" width="214" height="83"/>

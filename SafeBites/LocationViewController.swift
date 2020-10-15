@@ -75,7 +75,9 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //when you select it
-    }
+        let vc = storyboard?.instantiateViewController(withIdentifier: "seeRates") as! PerillaViewController
+        view.window?.rootViewController = vc
+        UserDefaults.standard.set(names[indexPath.row], forKey: "titleName")    }
     
     
 }

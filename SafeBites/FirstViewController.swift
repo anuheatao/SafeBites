@@ -74,17 +74,7 @@ class FirstViewController: UIViewController {
                                                  }                                    }
                                          }
                                      }
-                                        /* if let nameData = convertedJsonIntoDict[0] as? NSDictionary {
-                                             for i in nameData {
-                                                 if(i.key as! String == "name") {
-                                                     print("name: \(i.value)")
-                                                     self.names.append(i.key as! String)
-                                                 }
-                                             }
-                                         }else {
-                                             print("uh uh not workiing")
-                                     }
-                                     */
+                                    
 
                                      
                                  }
@@ -99,6 +89,8 @@ class FirstViewController: UIViewController {
                  
                  dataTask.resume()
                
+            }else {
+                print("its nil")
         }
             
     }

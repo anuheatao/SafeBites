@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,10 +18,14 @@
 		3F35865424DEA9BF00077AB0 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35865324DEA9BF00077AB0 /* LocationViewController.swift */; };
 		3F35865624DEB59600077AB0 /* PerillaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F35865524DEB59600077AB0 /* PerillaViewController.swift */; };
 		3FAC39EC24E26E0E00584639 /* RatePerillaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAC39EB24E26E0E00584639 /* RatePerillaViewController.swift */; };
+		427E1070191014A46DF934B4 /* Pods_SafeBites.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25E5DE2FAE03D8F7854D8C1 /* Pods_SafeBites.framework */; };
 		AC57EC6A2526A1D900C362DD /* nameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC57EC692526A1D900C362DD /* nameTableViewCell.swift */; };
+		ACEFAAF72536B090006F9CE8 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEFAAF62536B090006F9CE8 /* CustomSlider.swift */; };
+		ACEFAAFB253799E8006F9CE8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACEFAAFA253799E8006F9CE8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0248B50C2B5B1383EA470F0E /* Pods-SafeBites.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeBites.release.xcconfig"; path = "Target Support Files/Pods-SafeBites/Pods-SafeBites.release.xcconfig"; sourceTree = "<group>"; };
 		3F1CE21824E50F600069C15B /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		3F35863A24DDD74300077AB0 /* SafeBites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F35863D24DDD74300077AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		3F35865524DEB59600077AB0 /* PerillaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerillaViewController.swift; sourceTree = "<group>"; };
 		3FAC39EB24E26E0E00584639 /* RatePerillaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatePerillaViewController.swift; sourceTree = "<group>"; };
 		AC57EC692526A1D900C362DD /* nameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nameTableViewCell.swift; sourceTree = "<group>"; };
+		ACEFAAF62536B090006F9CE8 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		ACEFAAFA253799E8006F9CE8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C80711B229A0BED9F1D8625C /* Pods-SafeBites.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeBites.debug.xcconfig"; path = "Target Support Files/Pods-SafeBites/Pods-SafeBites.debug.xcconfig"; sourceTree = "<group>"; };
+		F25E5DE2FAE03D8F7854D8C1 /* Pods_SafeBites.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeBites.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427E1070191014A46DF934B4 /* Pods_SafeBites.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31816D0BCBC983D3E754C885 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C80711B229A0BED9F1D8625C /* Pods-SafeBites.debug.xcconfig */,
+				0248B50C2B5B1383EA470F0E /* Pods-SafeBites.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3F35863124DDD74300077AB0 = {
 			isa = PBXGroup;
 			children = (
 				3F35863C24DDD74300077AB0 /* SafeBites */,
 				3F35863B24DDD74300077AB0 /* Products */,
+				31816D0BCBC983D3E754C885 /* Pods */,
+				89AB656C2E14602B24E410DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,16 +93,26 @@
 				3F35864124DDD74300077AB0 /* FirstViewController.swift */,
 				3F35864324DDD74300077AB0 /* SecondViewController.swift */,
 				3F35864524DDD74300077AB0 /* Main.storyboard */,
+				ACEFAAF62536B090006F9CE8 /* CustomSlider.swift */,
 				3F35864824DDD74A00077AB0 /* Assets.xcassets */,
 				AC57EC692526A1D900C362DD /* nameTableViewCell.swift */,
 				3F35864A24DDD74A00077AB0 /* LaunchScreen.storyboard */,
 				3F35864D24DDD74A00077AB0 /* Info.plist */,
+				ACEFAAFA253799E8006F9CE8 /* GoogleService-Info.plist */,
 				3F35865324DEA9BF00077AB0 /* LocationViewController.swift */,
 				3F35865524DEB59600077AB0 /* PerillaViewController.swift */,
 				3FAC39EB24E26E0E00584639 /* RatePerillaViewController.swift */,
 				3F1CE21824E50F600069C15B /* ScoreViewController.swift */,
 			);
 			path = SafeBites;
+			sourceTree = "<group>";
+		};
+		89AB656C2E14602B24E410DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F25E5DE2FAE03D8F7854D8C1 /* Pods_SafeBites.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F35865024DDD74A00077AB0 /* Build configuration list for PBXNativeTarget "SafeBites" */;
 			buildPhases = (
+				ACEA24BA74131C8F40747310 /* [CP] Check Pods Manifest.lock */,
 				3F35863624DDD74300077AB0 /* Sources */,
 				3F35863724DDD74300077AB0 /* Frameworks */,
 				3F35863824DDD74300077AB0 /* Resources */,
+				3300A91372E6048D06CAB391 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F35864C24DDD74A00077AB0 /* LaunchScreen.storyboard in Resources */,
+				ACEFAAFB253799E8006F9CE8 /* GoogleService-Info.plist in Resources */,
 				3F35864924DDD74A00077AB0 /* Assets.xcassets in Resources */,
 				3F35864724DDD74300077AB0 /* Main.storyboard in Resources */,
 			);
@@ -151,12 +184,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3300A91372E6048D06CAB391 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeBites/Pods-SafeBites-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeBites/Pods-SafeBites-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SafeBites/Pods-SafeBites-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACEA24BA74131C8F40747310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeBites-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F35863624DDD74300077AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3F35865624DEB59600077AB0 /* PerillaViewController.swift in Sources */,
+				ACEFAAF72536B090006F9CE8 /* CustomSlider.swift in Sources */,
 				3F35865424DEA9BF00077AB0 /* LocationViewController.swift in Sources */,
 				3FAC39EC24E26E0E00584639 /* RatePerillaViewController.swift in Sources */,
 				3F35864424DDD74300077AB0 /* SecondViewController.swift in Sources */,
@@ -306,6 +382,7 @@
 		};
 		3F35865124DDD74A00077AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C80711B229A0BED9F1D8625C /* Pods-SafeBites.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +401,7 @@
 		};
 		3F35865224DDD74A00077AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0248B50C2B5B1383EA470F0E /* Pods-SafeBites.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
