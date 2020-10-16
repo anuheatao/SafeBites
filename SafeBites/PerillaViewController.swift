@@ -14,17 +14,21 @@ class PerillaViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ratePercentLabel: UILabel!
     @IBOutlet var SanSpecific: [UILabel]!
-    @IBOutlet var PDSpecific: [UIButton]!
-    @IBOutlet var SMSpecific: [UIButton]!
+    @IBOutlet var PDSpecific: [UILabel]!
+    @IBOutlet var SMSpecific: [UILabel]!
     @IBOutlet weak var RateButton: UIButton!
     @IBOutlet var slida: UISlider!
+    @IBOutlet var pdsLabel: UILabel!
+    @IBOutlet var pdsSlider: UISlider!
+    @IBOutlet var osdSlider: UISlider!
+    @IBOutlet var osLabel: UILabel!
     
     var db = Firestore.firestore()
     
     @IBAction func perillatolocation(_ sender: Any) {
-        self.performSegue(withIdentifier: "PerillatoLocationSegue", sender: self)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "locationVC") as! LocationViewController
+               view.window?.rootViewController = vc
     }
-    
     @IBAction func rateButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "PerillatoRateSegue", sender: self)
     }
@@ -42,25 +46,47 @@ class PerillaViewController: UIViewController {
                                  print("OH NO!!! Error fetching data: \(error.localizedDescription)")
                              }
                              if let document = document, document.exists {
-                                 let myData = document.data()
+                                let myData = document.data()
                                 let maskReq = myData?["maskWearingReqs"] as? Int ?? 0
                                 let sanitizerHygeine = myData?["sanitizerHygeine"] as? Int ?? 0
                                 let sanitizeAfter = myData?["sanitizeAfter"] as? Int ?? 0
                                 let touchlessTransaction = myData?["touchlessTransaction"] as? Int ?? 0
                                 let shieldsBarriers = myData?["shieldsBarriers"] as? Int ?? 0
                                 let total = myData?["total"] as? Int ?? 0
+                                let clearMarkSpacing = myData?["clearMarkSpacing"] as? Int ?? 0
+                                let sixFeetSpacing = myData?["sixFeetSpacing"] as? Int ?? 0
+                                let limitCustomers = myData?["limitCustomers"] as? Int ?? 0
+                                let designatedTransactionArea = myData?["designatedTransactionArea"] as? Int ?? 0
+                                let promotesSafety = myData?["promotesSafety"] as? Int ?? 0
+                                let tempCheck = myData?["tempCheck"] as? Int ?? 0
+                                let contactTracing = myData?["contactTracing"] as? Int ?? 0
+                                let outdoorDining = myData?["outdoorDining"] as? Int ?? 0
+                                let ventilationAirCirc = myData?["ventilationAirCirc"] as? Int ?? 0
+                                let laminatedSingleUseMenus = myData?["laminatedSingleUseMenus"] as? Int ?? 0
                                 let numerator = maskReq + sanitizeAfter + sanitizerHygeine + touchlessTransaction + shieldsBarriers
-                                print("numerator: \(numerator)")
+                                let pdNumber = clearMarkSpacing + sixFeetSpacing + limitCustomers + designatedTransactionArea + promotesSafety
+                                let osNumber = tempCheck + contactTracing + outdoorDining + ventilationAirCirc + laminatedSingleUseMenus
                                 let totals = total * 5
-                                print("totals: \(totals)")
-                                let float = (Float(numerator)/Float(totals)) * 100
-                                print("numba: \(float))")
+                                let float = roundf(Float(numerator)/Float(totals) * 100)
+                                let pdAverage = roundf((Float(pdNumber)/Float(totals)) * 100)
+                                let osAverage = roundf((Float(osNumber)/Float(totals)) * 100)
                                 self.slida.value = float
-                                print("ok slider changed to: \(self.slida.value)")
                                 self.ratePercentLabel.text = "\(self.slida.value)%"
                                 self.SanSpecific.forEach { (label) in
                                     label.text = "\(maskReq)/\(total) -- Mask Wearing Required \n \(sanitizerHygeine)/\(total) -- Hygiene Supplies Used \n \(sanitizeAfter)/\(total) -- Surfaces Sanitized after Each Person \n \(touchlessTransaction)/\(total) -- Touchless Transactions Used \n \(shieldsBarriers)/\(total) -- Sheilds or Physical Barriers"
                                 }
+                                self.pdsSlider.value = pdAverage
+                                self.pdsLabel.text = "\(self.pdsSlider.value)%"
+                                self.PDSpecific.forEach { (label) in
+                                    label.text = "\(clearMarkSpacing)/\(total) -- Clearly Marked Spacing \n \(sixFeetSpacing)/\(total) -- 6ft Spaced Furniture \n \(limitCustomers)/\(total) -- Limiting Customer Capacity \n \(designatedTransactionArea)/\(total) -- Designated Transaction Area \n \(promotesSafety)/\(total) -- Visible Signage Promoting Safety"
+                                }
+                                self.osdSlider.value = osAverage
+                                self.osLabel.text = "\(self.osdSlider.value)%"
+                                self.SMSpecific.forEach { (label) in
+                                    label.text = "\(tempCheck)/\(total) -- Temperature Check \n \(contactTracing)/\(total) -- Contact Tracing Provided \n \(outdoorDining)/\(total) -- Outdoor dining available \n \(ventilationAirCirc)/\(total) -- Ventilation and Air Circulation \n \(laminatedSingleUseMenus)/\(total) -- Single Use or Laminated Menus"
+                                }
+                                
+            
                 }}
                }
         

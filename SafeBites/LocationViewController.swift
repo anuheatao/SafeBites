@@ -18,7 +18,8 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
     var location: CLLocation!
     
     @IBAction func backtohomepressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "LocationtoHomeSegue", sender: self)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "beginningVC") as! UITabBarController
+        view.window?.rootViewController = vc
     }
     
     @IBAction func toPerillaPressed(_ sender: Any) {
