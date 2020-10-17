@@ -26,6 +26,7 @@ class RatePerillaViewController: UIViewController {
     @IBOutlet var outdoorDining: UIButton!
     @IBOutlet var ventilationAirCirc: UIButton!
     @IBOutlet var laminatedSingleUseMenus: UIButton!
+    @IBOutlet var commentTextField: UITextView!
     
     
     var restaurantName: String!
@@ -623,7 +624,12 @@ class RatePerillaViewController: UIViewController {
                         print("docc successfully written!")
                     }
                 }
-                
+                if self.commentTextField.text != nil {
+                    //there is a comment
+                    self.db.collection("Reviews").document("\(self.restaurantName ?? "nil")").updateData([
+                        "comment \(dataDes + 1)": self.commentTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "nil"
+                    ])
+                }
             }else {
                 self.db.collection("Reviews").document("\(self.restaurantName ?? "nil")").setData([
                     "total": dataDes + 1 ,
@@ -634,6 +640,13 @@ class RatePerillaViewController: UIViewController {
                         print("doc successfully written!")
                     }
                 }
+                if self.commentTextField.text != nil {
+                    //there is a comment
+                    self.db.collection("Reviews").document("\(self.restaurantName ?? "nil")").updateData([
+                        "comment \(dataDes + 1)": self.commentTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "nil"
+                    ])
+                }
+
             }
         }
     }
