@@ -105,6 +105,7 @@ class PerillaViewController: UIViewController, UITableViewDataSource & UITableVi
                      print("HIHI")
                      let data = docSnapshot?.data()
                      let total = data?["total"] as? Int ?? 0
+                if(total > 0) {
                      for i in 1...total {
                          if let comment = data?["comment \(i)"] as? String{
                              //there is a comment
@@ -119,6 +120,9 @@ class PerillaViewController: UIViewController, UITableViewDataSource & UITableVi
                              }
                          }
                      }
+                }else {
+                    self.commentArray.append("There are no comments right now. Add one by pressing the rate button.")
+                }
         }
         
         }
