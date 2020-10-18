@@ -18,7 +18,7 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
     var location: CLLocation!
     
     @IBAction func backtohomepressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "beginningVC") as! UITabBarController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "beginningVC") as! FirstViewController
         view.window?.rootViewController = vc
     }
     

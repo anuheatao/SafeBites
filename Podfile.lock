@@ -164,6 +164,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.3):
     - BoringSSL-GRPC/Interface (= 0.0.3)
   - BoringSSL-GRPC/Interface (0.0.3)
+  - BrightFutures (8.0.0)
   - Firebase/Analytics (6.21.0):
     - Firebase/Core
   - Firebase/Auth (6.21.0):
@@ -274,16 +275,20 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - YelpAPI (3.0.0)
 
 DEPENDENCIES:
+  - BrightFutures
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
+  - YelpAPI
 
 SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
+    - BrightFutures
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -303,10 +308,12 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - YelpAPI
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
+  BrightFutures: f8427b46feabaf73c5e71ace7d86d65dfbb47696
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
   FirebaseAuth: 7047aec89c0b17ecd924a550c853f0c27ac6015e
@@ -326,7 +333,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  YelpAPI: 9ae0ee45b998d306c1aff9b2d966dc23121f191e
 
-PODFILE CHECKSUM: bbfeaa19a727c89af7bc7d3b65a671ca94125fa8
+PODFILE CHECKSUM: 6b5ce3f3c91e9545a48e8555d148fbcff6f385a1
 
 COCOAPODS: 1.9.1
