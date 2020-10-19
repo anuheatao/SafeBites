@@ -35,6 +35,16 @@ class RatePerillaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 30)))
+               let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+               let doneBtn = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+               toolbar.setItems([flexSpace, doneBtn], animated: false)
+               
+               toolbar.sizeToFit()
+        commentTextField.inputAccessoryView = toolbar
+    }
+    @objc func doneButtonAction () {
+        self.view.endEditing(true)
     }
     override func viewDidAppear(_ animated: Bool) {
         if let x = UserDefaults.standard.object(forKey: "titleName") as? String {
