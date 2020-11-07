@@ -18,6 +18,8 @@ class FirstViewController: UIViewController, UISearchBarDelegate,UITableViewDele
     
     var locationManager = CLLocationManager()
     var names: [String] = []
+    var phoneNums: [String] = []
+    var foodImages: [String] = []
     var location: CLLocation!
     var city: String!
     var searchableRestaurants: [String] = []
@@ -76,10 +78,21 @@ class FirstViewController: UIViewController, UISearchBarDelegate,UITableViewDele
                                     if(i.key as! String == "businesses") {
                                         for j in i.value as! NSArray{
                                             for k in j as! NSDictionary {
-                                                if(k.key as! String == "name") {
+                                                if(k.key as! String == "name")
+                                                {
                                                     self.names.append(k.value as! String)
                                                     print("name: \(k.value)")
-                                                }}
+                                                }
+                                                
+                                                if (k.key as! String == "display_phone") {
+                                                    self.phoneNums.append(k.value as! String)
+                                                    print("phoneNUmes:\(self.phoneNums)")
+                                                }
+                                                
+                                                if (k.key as! String == "image_url") {
+                                                    self.foodImages.append((k.value as! String))
+                                                }
+                                            }
                                             
                                         }
                                     }
@@ -87,8 +100,10 @@ class FirstViewController: UIViewController, UISearchBarDelegate,UITableViewDele
                                 DispatchQueue.main.async {
                                     let vc = LocationViewController()
                                     vc.names = self.names
+                                    vc.foodImagesName = self.foodImages
                                     print("Vc names: \(vc.names)")
                                     UserDefaults.standard.set(self.names, forKey: "names")
+                                    UserDefaults.standard.set(self.foodImages, forKey: "foodImages")
                                     vc.location = self.location
                                     self.filteredData = self.names
                                     self.tableView.reloadData()
@@ -104,12 +119,17 @@ class FirstViewController: UIViewController, UISearchBarDelegate,UITableViewDele
             })
             
             dataTask.resume()
+            location.fetchCityAndCountry { (city, country, error) in
+                       guard let city = city, let country = country, error == nil else { print("error : \(error?.localizedDescription)"); return}
+                       print(city + ", " + country)
+                       self.city = city
+                   }
             
         }
         
         
         
-        
+        //OLD API CODE:
         /*                     let headers = [
          "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
          "x-rapidapi-key": "7583d34caemsh9b2f1408fcf2427p108a16jsnb67b17c9ec9c"
@@ -174,11 +194,6 @@ class FirstViewController: UIViewController, UISearchBarDelegate,UITableViewDele
          }else {
          print("its nil")
          }*/
-        location.fetchCityAndCountry { (city, country, error) in
-            guard let city = city, let country = country, error == nil else { print("error : \(error?.localizedDescription)"); return}
-            print(city + ", " + country)
-            self.city = city
-        }
     }
     @objc func doneButtonAction() {
         self.view.endEditing(true)

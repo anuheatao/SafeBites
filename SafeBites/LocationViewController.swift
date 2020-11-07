@@ -16,6 +16,8 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
     var names: [String] = []
     @IBOutlet var tableView: UITableView!
     var location: CLLocation!
+    var foodImages: [UIImage] = []
+    var foodImagesName: [String] = []
     
     @IBAction func backtohomepressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "beginningVC") as! FirstViewController
@@ -32,10 +34,21 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        if let x = UserDefaults.standard.object(forKey: "names") as? [String] {
+        if let x = UserDefaults.standard.object(forKey: "names") as? [String]
+        {
             names = x
         }
-    
+    if let y = UserDefaults.standard.object(forKey: "foodImages") as? [String]
+    {
+        foodImagesName = y
+    }
+        for i in foodImagesName {
+            let url = URL(string: i as! String)
+                                                        let data = try? Data(contentsOf: url!)
+                                                        let newImage = UIImage(data: data!)
+                                                            self.foodImages.append(newImage!)
+                                                            print("FOOD IMAGES: \(self.foodImages)")
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         if(location == nil) {
@@ -71,6 +84,7 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath) as! nameTableViewCell
         cell.nameLabel.text = names[indexPath.row]
+        cell.foodImage.image = foodImages[indexPath.row]
         return cell
     }
     
@@ -78,7 +92,9 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
         //when you select it
         let vc = storyboard?.instantiateViewController(withIdentifier: "seeRates") as! PerillaViewController
         view.window?.rootViewController = vc
-        UserDefaults.standard.set(names[indexPath.row], forKey: "titleName")    }
+        UserDefaults.standard.set(names[indexPath.row], forKey: "titleName")
+        
+    }
     
     
 }
