@@ -1,7 +1,7 @@
 # Safe Bites
 
 ## To Download On Your Personal Phone: 
-*Note: It only is compatable for Apple devices andit is still not finished and may be buggy. If there is any issue, report it by creating a new issue and we will address it.*
+*Note: It only is compatable for Apple devices and it is still not finished and may be buggy. If there is any issue, report it by creating a new issue and we will address it.*
 
 
 
