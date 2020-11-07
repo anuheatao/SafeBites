@@ -110,32 +110,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hO-Rp-Jqy">
-                                                    <rect key="frame" x="40" y="253" width="354" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Restaurant Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hO-Rp-Jqy">
+                                                    <rect key="frame" x="25" y="253" width="222.5" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dy7-Od-2vv">
                                                     <rect key="frame" x="20" y="11" width="374" height="234"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iJ-Ig-NP1">
+                                                    <rect key="frame" x="255" y="253" width="139" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="4iJ-Ig-NP1" firstAttribute="height" secondItem="8hO-Rp-Jqy" secondAttribute="height" id="3f4-RG-Rq9"/>
                                                 <constraint firstItem="8hO-Rp-Jqy" firstAttribute="top" secondItem="Dy7-Od-2vv" secondAttribute="bottom" constant="8" id="6Dl-3B-M2F"/>
+                                                <constraint firstItem="4iJ-Ig-NP1" firstAttribute="top" secondItem="Dy7-Od-2vv" secondAttribute="bottom" constant="8" id="6xM-dM-vxB"/>
                                                 <constraint firstItem="Dy7-Od-2vv" firstAttribute="leading" secondItem="E3l-bu-UeY" secondAttribute="leading" constant="20" id="LbY-Gb-b7V"/>
                                                 <constraint firstItem="Dy7-Od-2vv" firstAttribute="centerX" secondItem="E3l-bu-UeY" secondAttribute="centerX" id="WXb-KO-xuu"/>
+                                                <constraint firstAttribute="trailing" secondItem="4iJ-Ig-NP1" secondAttribute="trailing" constant="20" id="alW-j1-87Z"/>
+                                                <constraint firstItem="4iJ-Ig-NP1" firstAttribute="centerY" secondItem="8hO-Rp-Jqy" secondAttribute="centerY" id="dGa-Ph-0Q9"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="8hO-Rp-Jqy" secondAttribute="bottom" id="djx-26-liY"/>
                                                 <constraint firstItem="Dy7-Od-2vv" firstAttribute="height" secondItem="E3l-bu-UeY" secondAttribute="height" multiplier="0.78" id="hB3-zu-Z9w"/>
                                                 <constraint firstAttribute="trailing" secondItem="Dy7-Od-2vv" secondAttribute="trailing" constant="20" id="hxC-Jt-0MR"/>
-                                                <constraint firstItem="8hO-Rp-Jqy" firstAttribute="leading" secondItem="E3l-bu-UeY" secondAttribute="leadingMargin" constant="20" id="m3T-e3-Jb2"/>
+                                                <constraint firstItem="4iJ-Ig-NP1" firstAttribute="leading" secondItem="8hO-Rp-Jqy" secondAttribute="trailing" constant="7.5" id="iCv-cp-0g4"/>
+                                                <constraint firstItem="8hO-Rp-Jqy" firstAttribute="leading" secondItem="E3l-bu-UeY" secondAttribute="leadingMargin" constant="5" id="m3T-e3-Jb2"/>
                                                 <constraint firstItem="Dy7-Od-2vv" firstAttribute="top" secondItem="E3l-bu-UeY" secondAttribute="top" constant="11" id="p2w-9G-qye"/>
                                                 <constraint firstItem="Dy7-Od-2vv" firstAttribute="width" secondItem="E3l-bu-UeY" secondAttribute="width" multiplier="0.903382" id="sk3-H3-Q8X"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8hO-Rp-Jqy" secondAttribute="trailing" id="u7A-XS-qiR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="foodImage" destination="Dy7-Od-2vv" id="Prn-dz-ymj"/>
                                             <outlet property="nameLabel" destination="8hO-Rp-Jqy" id="voj-eI-DQA"/>
+                                            <outlet property="phoneNumLabel" destination="4iJ-Ig-NP1" id="ala-EA-ssB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -159,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqg-wN-MY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557.9710144927537" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="1423" y="-384"/>
         </scene>
         <!--PerillaViewController-->
         <scene sceneID="ku0-nf-2Qu">

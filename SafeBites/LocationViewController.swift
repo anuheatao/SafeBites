@@ -18,6 +18,7 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
     var location: CLLocation!
     var foodImages: [UIImage] = []
     var foodImagesName: [String] = []
+    var phoneNums: [String] = []
     
     @IBAction func backtohomepressed(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "beginningVC") as! FirstViewController
@@ -38,42 +39,46 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
         {
             names = x
         }
-    if let y = UserDefaults.standard.object(forKey: "foodImages") as? [String]
-    {
-        foodImagesName = y
-    }
+        if let z = UserDefaults.standard.object(forKey: "phoneNums") as? [String]
+        {
+            phoneNums = z
+        }
+        if let y = UserDefaults.standard.object(forKey: "foodImages") as? [String]
+        {
+            foodImagesName = y
+        }
         for i in foodImagesName {
             let url = URL(string: i as! String)
-                                                        let data = try? Data(contentsOf: url!)
-                                                        let newImage = UIImage(data: data!)
-                                                            self.foodImages.append(newImage!)
-                                                            print("FOOD IMAGES: \(self.foodImages)")
+            let data = try? Data(contentsOf: url!)
+            let newImage = UIImage(data: data!)
+            self.foodImages.append(newImage!)
+            print("FOOD IMAGES: \(self.foodImages)")
         }
     }
     override func viewDidAppear(_ animated: Bool) {
         if(location == nil) {
             let alertController = UIAlertController (title: "Unable to Get Nearby Restaurants", message: "To get nearby restaurants, we need to access your location. Please go to settings to fix this. Thanks!", preferredStyle: .alert)
-
+            
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                      alertController.addAction(cancelAction)
-              let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
-
-                  guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-                      return
-                  }
-
-                  if UIApplication.shared.canOpenURL(settingsUrl) {
-                      UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-                          print("Settings opened: \(success)") // Prints true
-                      })
-                  }
-              }
-              alertController.addAction(settingsAction)
-          
-
-              present(alertController, animated: true, completion: nil)
+            alertController.addAction(cancelAction)
+            let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+                
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+                
+                if UIApplication.shared.canOpenURL(settingsUrl) {
+                    UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                        print("Settings opened: \(success)") // Prints true
+                    })
+                }
+            }
+            alertController.addAction(settingsAction)
+            
+            
+            present(alertController, animated: true, completion: nil)
             print("hullo")
-
+            
         }
     }
     
@@ -85,6 +90,7 @@ class LocationViewController: UIViewController, UITableViewDelegate,UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "nameCell", for: indexPath) as! nameTableViewCell
         cell.nameLabel.text = names[indexPath.row]
         cell.foodImage.image = foodImages[indexPath.row]
+        cell.phoneNumLabel.text = phoneNums[indexPath.row]
         return cell
     }
     

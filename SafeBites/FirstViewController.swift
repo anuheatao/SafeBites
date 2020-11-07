@@ -104,6 +104,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate,UITableViewDele
                                     print("Vc names: \(vc.names)")
                                     UserDefaults.standard.set(self.names, forKey: "names")
                                     UserDefaults.standard.set(self.foodImages, forKey: "foodImages")
+                                    UserDefaults.standard.set(self.phoneNums, forKey: "phoneNums")
                                     vc.location = self.location
                                     self.filteredData = self.names
                                     self.tableView.reloadData()
